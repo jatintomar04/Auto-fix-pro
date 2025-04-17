@@ -28,7 +28,11 @@ app.use("/api/car", require("./routes/carRoutes"))
 
 app.use("/api/admin", require("./routes/adminRoutes"))
 
+// cors
 
+const cors = require("cors")
+
+app.use(cors({allwOrigin : "*"}))
 
 
 // Error handler 

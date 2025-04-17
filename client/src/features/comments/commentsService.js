@@ -1,4 +1,5 @@
 import axios from "axios"
+import { ApiUrl } from "../../config"
 
 const feathComments = async(token, id) => {
 
@@ -8,7 +9,7 @@ const feathComments = async(token, id) => {
         }
     }
 
-    const response = await axios.get(`/api/car/${id}/comment`, options)
+    const response = await axios.get(`${ApiUrl}/api/car/${id}/comment`, options)
     return response.data
 }
 
@@ -20,7 +21,7 @@ const createComments = async(formData ,token) => {
         }
     }
 
-    const response = await axios.post(`/api/car/${formData.id}/comment`,formData, options)
+    const response = await axios.post(`${ApiUrl}/api/car/${formData.id}/comment`,formData, options)
     return response.data
 }
 
