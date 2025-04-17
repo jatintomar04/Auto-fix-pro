@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import commentService from "./CommentsService";
+import commentService from "./commentsService";
 
 
 const commentSlice = createSlice({
