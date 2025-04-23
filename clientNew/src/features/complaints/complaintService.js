@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ApiUrl } from "../../config";
+
 
 
 const AddComplaint = async (formData, token) => {
@@ -13,7 +13,7 @@ const AddComplaint = async (formData, token) => {
    };
    console.log(options);
 
-   const response = await axios.post(`${ApiUrl}/api/car`, formData, options);
+   const response = await axios.post(`/api/car`, formData, options);
    
    return response.data;
 };
@@ -28,7 +28,7 @@ const fetchComplaints = async (token) => {
       }
    }
 
-   const response = await axios.get(`${ApiUrl}/api/car` , options)
+   const response = await axios.get(`/api/car` , options)
    return response.data
 };
 
@@ -40,7 +40,7 @@ const fetchComplaint = async (id, token) => {
       }
    }
 
-   const response = await axios.get(`${ApiUrl}/api/car/${id}` , options)
+   const response = await axios.get(`/api/car/${id}` , options)
    return response.data
 };
 
@@ -53,7 +53,7 @@ const updateComplaint = async (id, token) => {
       }
    }
 
-   const response = await axios.put(`${ApiUrl}/api/car/${id}` ,{status : "close"} , options)
+   const response = await axios.put(`/api/car/${id}` ,{status : "close"} , options)
    console.log(response.data)
    return response.data
 };
@@ -67,7 +67,7 @@ const fetchAllComplaint = async (token) => {
       }
    }
 
-   const response = await axios.get(`${ApiUrl}/api/admin/complaints` , options)
+   const response = await axios.get(`/api/admin/complaints` , options)
    console.log(response.data)
    
    return response.data

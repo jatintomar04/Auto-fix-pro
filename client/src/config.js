@@ -1,1 +1,0 @@
-export const ApiUrl = "https://auto-fix-pro.onrender.com/"
