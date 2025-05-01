@@ -6,5 +6,14 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base : './',
   plugins: [react(), tailwindcss()],
+  // server : {
+  //   proxy : {
+  //     '/api' : {
+  //       changeOrigin : true,
+  //       secure : false,
+  //       target : 'https://auto-fix-pro.onrender.com'
+  //     }
+  //   }
+  // }
  
 })
