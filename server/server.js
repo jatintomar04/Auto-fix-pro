@@ -15,7 +15,8 @@ app.use(express.urlencoded({extended : true}))
 
 // CORS setup
 app.use(cors({
-    origin: 'https://your-frontend.vercel.app',
+    // origin: 'https://your-frontend.vercel.app',
+    origin: 'https://auto-fix-pro.vercel.app/',
     credentials: true
   }));
 
