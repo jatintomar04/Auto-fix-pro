@@ -1,5 +1,6 @@
 const express = require('express')
 require ('dotenv').config()
+const cors = require('cors');
 const colors = require('colors')
 const connectDB = require("./config/db_config")
 const errorHandler = require('./middleware/errorHandler')
@@ -11,6 +12,12 @@ connectDB()
 
 app.use(express.json())
 app.use(express.urlencoded({extended : true}))
+
+// CORS setup
+app.use(cors({
+    origin: 'https://your-frontend.vercel.app',
+    credentials: true
+  }));
 
 app.get("/", (req,res)=> {
     res.json ({
@@ -28,11 +35,6 @@ app.use("/api/car", require("./routes/carRoutes"))
 
 app.use("/api/admin", require("./routes/adminRoutes"))
 
-// cors
-
-const cors = require("cors")
-
-app.use(cors({allwOrigin : "*"}))
 
 
 // Error handler 
