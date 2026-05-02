@@ -88,7 +88,6 @@ const fetchAllUsers = async (token) => {
    return response.data
 };
 
-
 const complaintsService = { fetchComplaints , fetchComplaint , updateComplaint, fetchAllComplaint, fetchAllUsers,AddComplaint};
 
 

@@ -10,7 +10,9 @@ import Allcomplaints from './pages/Allcomplaints'
 import Footer from './components/Footer'
 import PrivateComponent from './components/PrivateComponent'
 import CarDetails from './pages/CarDetails'
-import { Alluser } from './pages/Alluser'
+import AllUsers from './pages/AllUsers'
+
+
 const App = () => {
   return (
     <>
@@ -24,8 +26,7 @@ const App = () => {
       <Route path='raise-complaint' element ={<RaiseComplaints />} />
       <Route path='all-complaints' element ={<Allcomplaints />} />
       <Route path='complaint/:id' element ={<CarDetails />} />
-      <Route path='/car/all-users' element ={<Alluser />} />
-
+      <Route path='all-users' element ={<AllUsers />} />
       </Route>
       </Routes>
       <ToastContainer />
